@@ -1,4 +1,4 @@
-import { ElementType, HTMLAttributes } from 'react';
+import type { ElementType, HTMLAttributes } from 'react';
 import { cn } from './Button';
 
 interface TypographyProps extends HTMLAttributes<HTMLElement> {
