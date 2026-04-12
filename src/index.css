@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #131313;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container: #201f1f;
+  --color-surface-bright: #393939;
+
+  --color-primary: #f2be8c;
+  --color-primary-container: #d4a373;
+  --color-on-primary-container: #5b3912;
+  
+  --color-outline-variant: #50453b;
+  
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #d4c4b7;
+  --color-error: #ffb4ab;
+
+  --font-display: Manrope, sans-serif;
+  --font-body: Inter, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-body);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+}
+
+/* Custom Utilities for Glassmorphism and Ghost Borders */
+@layer utilities {
+  .glass-header {
+    background-color: rgba(19, 19, 19, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+  
+  .primary-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));
+  }
+}
