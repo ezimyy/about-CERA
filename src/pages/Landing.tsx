@@ -12,19 +12,19 @@ export default function Landing() {
       case 'intro':
         return (
           <div className="relative w-64 h-64 mx-auto flex items-center justify-center">
-            <img src="/images/intro.png" alt="Intro Visual" className="w-full h-full object-contain drop-shadow-xl" />
+            <img src={`${import.meta.env.BASE_URL}images/intro.png`} alt="Intro Visual" className="w-full h-full object-contain drop-shadow-xl" />
           </div>
         );
       case 'target':
         return (
           <div className="relative w-64 h-64 mx-auto flex items-center justify-center">
-            <img src="/images/target.png" alt="Target Mockup" className="w-full h-full object-contain drop-shadow-2xl" />
+            <img src={`${import.meta.env.BASE_URL}images/target.png`} alt="Target Mockup" className="w-full h-full object-contain drop-shadow-2xl" />
           </div>
         );
       case 'vision':
         return (
           <div className="relative w-72 h-72 mx-auto flex items-center justify-center">
-            <img src="/images/vision.png" alt="Vision Network" className="w-full h-full object-contain drop-shadow-md" />
+            <img src={`${import.meta.env.BASE_URL}images/vision.png`} alt="Vision Network" className="w-full h-full object-contain drop-shadow-md" />
           </div>
         );
     }
