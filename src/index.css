@@ -1,24 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-surface: #131313;
-  --color-surface-container-lowest: #0e0e0e;
-  --color-surface-container-low: #1c1b1b;
-  --color-surface-container: #201f1f;
-  --color-surface-bright: #393939;
+  --color-surface: #FFFFFF;
+  --color-surface-container-lowest: #F8F8F8;
+  --color-surface-container-low: #F5F5F5;
+  --color-surface-container: #EEEEEE;
+  --color-surface-bright: #E0E0E0;
 
-  --color-primary: #f2be8c;
-  --color-primary-container: #d4a373;
-  --color-on-primary-container: #5b3912;
+  --color-primary: #5D4037;
+  --color-primary-container: #795548;
+  --color-on-primary-container: #FFFFFF;
   
-  --color-outline-variant: #50453b;
+  --color-accent: #2962FF;
+  --color-outline-variant: #E0E0E0;
   
-  --color-on-surface: #e5e2e1;
-  --color-on-surface-variant: #d4c4b7;
-  --color-error: #ffb4ab;
+  --color-on-surface: #000000;
+  --color-on-surface-variant: #333333;
+  --color-error: #B00020;
 
-  --font-display: Manrope, sans-serif;
-  --font-body: Inter, sans-serif;
+  --font-display: 'Pretendard', sans-serif;
+  --font-body: 'Pretendard', sans-serif;
 }
 
 @layer base {
@@ -36,15 +37,29 @@
   }
 }
 
-/* Custom Utilities for Glassmorphism and Ghost Borders */
 @layer utilities {
   .glass-header {
-    background-color: rgba(19, 19, 19, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
   }
   
   .primary-gradient {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
